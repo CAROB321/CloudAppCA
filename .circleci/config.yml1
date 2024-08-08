@@ -1,0 +1,58 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@2.0.1
+
+executors:
+  docker-executor:
+    docker:
+      - image: cimg/ruby:3.3.4-node
+
+jobs:
+  build:
+    working_directory: ~/cad_ca
+    docker:
+      - image: cimg/ruby:3.3.4-node
+    steps:
+      - checkout
+      - setup_remote_docker
+
+      - run:
+          name: docker-login
+          command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
+      - run:
+          name: build-docker-image
+          command: docker build -t $DOCKER_USERNAME/$IMAGE_NAME:latest . --build-arg SECRET_KEY_BASE=$SECRET_KEY_BASE
+
+      - run:
+          name: publish-docker-image
+          command: docker push $DOCKER_USERNAME/$IMAGE_NAME:latest
+
+      - run:
+          name: run-docker-image
+          command: docker run -p 3000:3000 -d $DOCKER_USERNAME/$IMAGE_NAME
+
+  deploy:
+    docker:
+      - image: cimg/ruby:3.3.4-node
+    steps:
+      - run:
+          name: deploy-application to ec2
+          command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "export CONTAINER_NAME=\"$CONTAINER_NAME\"; export IMAGE_NAME=\"$IMAGE_NAME\"; export DOCKER_USERNAME=\"$DOCKER_USERNAME\"; sudo rm -rf CAD_CA/; git clone https://github.com/ritaobrien/CAD_CA; source CAD_CA/deploy.sh"
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - main
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main
+          requires:
+            - build
