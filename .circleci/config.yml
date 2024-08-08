@@ -38,7 +38,7 @@ jobs:
     steps:
       - run:
           name: deploy-application to ec2
-          command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "export CONTAINER_NAME=\"$CONTAINER_NAME\"; export IMAGE_NAME=\"$IMAGE_NAME\"; export DOCKER_USERNAME=\"$DOCKER_USERNAME\"; sudo rm -rf TodoList/; git clone https://github.com/trionanic/TodoList; source TodoList/deploy.sh"
+          command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "export CONTAINER_NAME=\"$CONTAINER_NAME\"; export IMAGE_NAME=\"$IMAGE_NAME\"; export DOCKER_USERNAME=\"$DOCKER_USERNAME\"; sudo rm -rf CloudAppCA/; git clone https://github.com/CAROB321/CloudAppCA.git; source CloudAppCA/deploy.sh"
 
 workflows:
   version: 2
