@@ -1,0 +1,32 @@
+<h1>INDEX GENRE</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-6 centredisplay">
+      <br />
+      <p class="headingtext"><%= image_tag 'book_categoriser.png'  %></p>
+      <p class="headingtext">FULL CATALOGUE</p>
+      <br /><br />
+      <%= link_to "ADD NEW GENRE", new_genre_path, class: "btn btn-outline-success" %>
+      <br /><br />
+      <hr class="hr" />
+      <div>
+        <% @genres.each do |genre| %>
+          <%= render genre %>
+          <br />
+          <div class="buttons">
+          <%= link_to "SHOW GENRE", genre, class: "btn btn-outline-dark" %>
+          
+          <%= link_to 'EDIT GENRE', edit_genre_path(genre), class: "btn btn-outline-success" %> 
+          <%= button_to "DELETE GENRE", genre, method: :delete, class: "btn btn-outline-danger" %>
+          </div>
+          <br />
+          <hr class="hr" />
+           <% end %>
+      </div>
+    </div>
+    <div class="col-lg-3">
+    </div>
+  </div>
+</div>

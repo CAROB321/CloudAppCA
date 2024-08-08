@@ -1,0 +1,175 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap";
+
+ .navbar-nav {
+   margin-left: auto;
+   color:#317a8b;
+}
+
+.nav-link{
+   color:#317a8b;
+}
+
+.nav-item{
+   font-size: 25px;
+   text-decoration: underline;
+}
+.col-lg-8{
+   align-items: center;
+}
+.headingtext{
+   text-decoration: underline;
+   font-weight: bold;
+   text-align: center;
+   font-size: 25px;
+   color: #05445e;
+}
+ body{
+    background-color: #f6f5f0;
+    color:#317a8b;
+    font-size: 15px;
+ }
+ .rosario-normal {
+    font-family: "Rosario", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+ .container{
+    background-color: #f6f5f0;
+    font-family: "Rosario";
+ }
+
+ .btn-dark{
+ 
+   color: #f6f5f0;
+   background-color:#317a8b;
+    font-weight: 600;
+   
+ }
+
+ .genres{
+   text-align: center;
+   align-items: center;
+   
+ }
+
+ .btn{
+   margin-right:10px;
+ }
+ .buttons{
+   justify-content: center;
+   display:flex;
+   
+ }
+ .f.label{
+   border-radius:20px;
+ }
+.noticeok{
+   color: green;
+   font-weight: 500;
+}
+ .centredisplay{
+   text-align: center;
+ }
+
+ .redbtn:hover{
+   background-color: red;
+ }
+ .col{
+    border-color: red;
+    border-style: dashed;
+ }
+
+ .center{
+    align-items:center;
+    font-size: 20px;
+    text-decoration: underline;  
+    margin: auto; 
+ }
+
+ .centercard{
+   align-items:center;
+   font-size: 20px;
+    margin: auto; 
+    display:flex;
+    border-color: #317a8b;
+    border-width: 3px;
+    
+}
+ .custom-text-field {
+   width: 300px;
+   height: 40px;
+   border: 1px solid #ccc;
+   padding: 10px;
+   border-radius: 5px;
+ }
+
+ .custom-submit-button {
+   background-color: #317a8b;
+   color: white;
+   padding: 15px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s;
+ }
+ 
+ .custom-submit-button:hover {
+   background-color: #05445e;
+ }
+
+   hr {
+      padding: 0;
+      border: none;
+      border-top: medium double #05445e;
+      color: #333;
+      text-align: center;
+      }
+      hr:after {
+      
+      display: inline-block;
+      position: relative;
+      top: -0.7em;
+      font-size: 1.5em;
+      padding: 0 0.25em;
+      background: white;
+      }
+ .btn-outline-dark{
+    border: 1px solid #317a8b;
+    color:#05445e;
+ 
+    
+ }
+
+ btn-outline-danger:hover{
+   background-color: red;
+ }
+
+.btn-outline-dark:hover{
+   background-color:
+   #05445e;
+   color:#f6f5f0;
+}
+.custom-button{
+   background-color: #317a8b;
+   color:#f6f5f0;
+}
+

@@ -1,0 +1,17 @@
+<h1>EDIT BOOKGRFRFYERTY</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-6 centredisplay">   
+    <br />
+    <p class="headingtext">Edit book in the <%= @genre.name %> section</p>
+    <br />
+        <%= render "form", book: @book %>
+        <p id="notice"><%= notice %></p>
+         <%= link_to "Back to genres", genre_books_path %>
+    </div>
+    <div class="col-lg-3">
+    </div>
+  </div>
+</div>

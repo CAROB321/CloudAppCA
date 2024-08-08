@@ -1,0 +1,23 @@
+<h1>NEW BOOK</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-6 centredisplay">   
+    <br />
+    <p class="headingtext">Add a new book to the <%= @genre.name %> section</p>
+    <br />
+        <%= render "form", book: @book %>
+        
+         <%= link_to "BACK TO FULL CATALOGUE", genre_books_path, class: "btn btn-outline-dark btn-sm" %>
+    </div>
+    <div class="col-lg-3">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

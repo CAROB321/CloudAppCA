@@ -1,0 +1,61 @@
+<h1>INDEX BOOK</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-6 centredisplay">   
+    <br />
+    <p class="headingtext">Books in the <%= @genre.name %> section</p>
+    <br />
+    <%= link_to 'ADD NEW BOOK TO GENRE', new_genre_book_path(@genre), class: 'btn btn-outline-success btn-sm' %>
+    
+    <%= link_to 'BACK TO FULL CATALOGUE', genres_path, class: 'btn btn-outline-dark btn-sm' %>
+    <br />
+    <br />
+    
+    <div id="books">
+    <% @genre.books.each do |book| %>
+        <hr />
+     <%= render book %>
+    <div class="buttons">
+     <%= link_to 'EDIT BOOK', edit_genre_book_path(@genre, book), class: 'btn btn-outline-success btn-sm' %>
+    <%= button_to "DELETE BOOK", genre_book_path(@genre, book), method: :delete, class: 'btn btn-outline-danger btn-sm'  %>
+    </div>
+
+     <hr />
+    
+     <% end %>
+    </div>
+      
+      
+
+    </div>
+    <div class="col-lg-3">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+

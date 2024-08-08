@@ -1,0 +1,48 @@
+<h1>SHOW GENRE</h1>
+123
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-6 centredisplay">   
+    <!-- Display the books of a genre -->
+<br />
+    <p class="headingtext"><%= @genre.name %></p>
+    <%= link_to 'ADD NEW BOOK TO GENRE', new_genre_book_path(@genre), class: 'btn btn-outline-success btn-sm' %>
+    <%= link_to 'BACK TO FULL CATALOGUE', genres_path, class: 'btn btn-outline-dark btn-sm' %> 
+    <br />    
+
+<br />
+<p><strong>Books in <%= @genre.name %></strong></p>
+
+
+
+
+
+<div id="books centredisplay">
+  <% if @genre.books.any? %>
+    <% @genre.books.each do |book| %>
+      <div class="book">
+      <hr />  
+      <%= render book%>
+        
+        <%= button_to "DELETE THIS BOOK", genre_book_path(@genre, book), method: :delete, class: 'btn btn-outline-danger btn-sm'  %>
+        <hr />      
+        </div>
+    <% end %>
+  <% else %>
+    <p class="noticeok">No books currently in this genre - add one below.</p>
+  <% end %>
+
+</div>
+<br />
+
+    
+    </div>
+    <div class="col-lg-3">
+    </div>
+  </div>
+</div>
+
+
+
