@@ -17,15 +17,17 @@
  @import "bootstrap";
 
 
- html, body {
-   height: 100%;
-   margin: 0;
-   padding: 0;
-}
+
 
  .navbar-nav {
    margin-left: auto;
    color:#317a8b;
+}
+
+html, body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
 }
 
 .custom-navbar {
@@ -35,7 +37,6 @@
    background-repeat: no-repeat; /* Prevent repeating the background image */
    height: 150px; /* Adjust the height as needed */
    border: none;
-   padding:0; /* Remove border if any */
  }
 
  .navbar-logo {
@@ -47,9 +48,7 @@
    justify-content: center;
    width: 100%; /* Make sure the brand occupies full width */
  }
- .container-fluid{
-   padding:0;
-}
+
 .custom-navbar {
    height: 125px; /* Adjust this value to set the desired height */
    padding:0;
@@ -71,6 +70,15 @@
    top: 0;
    left: 0;
 }
+
+.card{
+   
+   background-color: #ffffff;
+   align-items: center;
+   
+   border-color: #ffffff;
+   border-radius:10px;
+}
 .nav-link{
    color:#317a8b;
 }
@@ -89,7 +97,59 @@
    text-align: center;
    font-size: 25px;
    color: #05445e;
+   font-family:"Montserrat";
 }
+
+.detailtext{
+   font-weight: bold;
+   justify-items: left;
+   font-size: 20px;
+   color: #133d49;
+   font-family: "Montserrat";
+}
+
+.btn-warning{
+   background-color: #f15a29;
+   border-color: #f15a29;
+   color:#ffffff!important;
+}
+
+.btn-warning:hover{
+   background-color: #ffffff;
+ border-color: #f15a29;
+   color:#133d49!important;
+}
+
+.btn-primary{
+   background-color: #fbb040;
+   border-color: #fbb040;
+   color:#ffffff!important;
+}
+
+.btn-primary:hover{
+   background-color: #ffffff;
+   border-color: #fbb040;
+     color:#133d49!important;
+}
+
+.btn-outline-info:hover{
+background-color:#103540;
+color:#ffffff!important;
+border-color: #103540;
+}
+
+   
+.btn-outline-warning:hover{
+   background-color: #f15a29;
+   color:#ffffff!important;
+   border-color: #f15a29
+   }
+   
+.infotext{
+   font-size: 18px;
+}
+
+
  body{
     color: #ffffff;
     font-size: 15px;
@@ -101,16 +161,37 @@
     margin: 0;
     padding: 0;
  }
- .rosario-normal {
-    font-family: "Rosario", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-  }
+
+ .btn-lg-white{
+   background-color: #f15a29;
+   border-color: #f15a29;
+   color:#ffffff;
+}
+
+.btn-lg:hover{
+   background-color: #fbb040;
+   border-color: #fbb040;
+   color:#ffffff;
+}
+.montserrat-regular{
+   font-family: "Montserrat";
+   font-optical-sizing: auto;
+   font-weight: 300;
+   font-style: normal;
+ }
+
+ .montserrat-regular{
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 600;
+   font-style: normal;
+ }
+
+
 
  .container{
     background-color: #f6f5f0;
-    font-family: "Rosario";
+    font-family: "Montserrat";
  }
 
  .btn-dark{
