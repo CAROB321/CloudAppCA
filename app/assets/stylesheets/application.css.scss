@@ -86,6 +86,9 @@ html, body {
    border-radius:10px;
 }
 
+.card-title{
+   justify-content: center;
+}
 .nav-link{
    color:#317a8b;
 }
@@ -101,8 +104,8 @@ html, body {
    text-decoration: underline;
 
    text-align: center;
-   font-size: 25px;
-   color: #05445e;
+   font-size: 20px;
+   color: #ffffff;
    font-family: "Montserrat";
 }
 
@@ -316,4 +319,5 @@ border-color: #103540;
    background-color: #317a8b;
    color:#f6f5f0;
 }
+
 
