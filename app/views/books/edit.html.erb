@@ -1,15 +1,18 @@
-<h1>EDIT BOOKGRFRFYERTY</h1>
-<div class="container-fluid">
+<h1>EDIT BOOK</h1>
+<div class="container-fluid pt-5">
   <div class="row">
     <div class="col-lg-3">
     </div>
     <div class="col-lg-6 centredisplay">   
-    <br />
-    <p class="headingtext">Edit book in the <%= @genre.name %> section</p>
-    <br />
-        <%= render "form", book: @book %>
-        <p id="notice"><%= notice %></p>
-         <%= link_to "Back to genres", genre_books_path %>
+      <br />
+      <p>EDIT BOOK IN THE <%= @genre.name %> GENRE</p>
+      <br />
+      
+      <!-- Renders the form partial for editing the book -->
+      <%= render "form", book: @book %>
+      
+      <!-- Link to go back to the show page of the edited book -->
+      <%= link_to "BACK TO #{@book.title.upcase} DETAILS", genre_book_path(@genre, @book), class: 'btn btn-primary btn-sm' %>
     </div>
     <div class="col-lg-3">
     </div>
