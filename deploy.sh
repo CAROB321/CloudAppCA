@@ -29,3 +29,7 @@ sudo docker run -p 3000:3000 -d --name $CONTAINER_NAME $FULL_IMAGE_NAME
 
 #check that the container is actually up
 sudo docker ps -a | grep $CONTAINER_NAME
+
+#clean up redundant images
+echo "cleaning up"
+sudo docker system prune
