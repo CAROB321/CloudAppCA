@@ -17,17 +17,15 @@
  @import "bootstrap";
 
 
-
-
- .navbar-nav {
-   margin-left: auto;
-   color:#317a8b;
-}
-
 html, body {
    height: 100%;
    margin: 0;
    padding: 0;
+}
+
+.navbar-nav {
+   margin-left: auto;
+   color:#317a8b;
 }
 
 .custom-navbar {
@@ -53,9 +51,11 @@ html, body {
    height: 125px; /* Adjust this value to set the desired height */
    padding:0;
  }
- .container-fluid{
+
+.container-fluid{
    padding:0;
 }
+
 .navbar{
    background-image: image-url('navbg.png');
    background-size: cover;
@@ -72,25 +72,25 @@ html, body {
 }
 
 .card{
-   
    background-color: #ffffff;
-   align-items: center;
-   
+   align-items: center;  
    border-color: #ffffff;
    border-radius:10px;
 }
+
 .nav-link{
    color:#317a8b;
 }
-
 
 .nav-item{
    font-size: 25px;
    text-decoration: underline;
 }
+
 .col-lg-8{
    align-items: center;
 }
+
 .headingtext{
    text-decoration: underline;
    font-weight: bold;
@@ -129,7 +129,7 @@ html, body {
 .btn-primary:hover{
    background-color: #ffffff;
    border-color: #fbb040;
-     color:#133d49!important;
+   color:#133d49!important;
 }
 
 .btn-outline-info:hover{
@@ -187,42 +187,40 @@ border-color: #103540;
    font-style: normal;
  }
 
-
-
  .container{
     background-color: #f6f5f0;
     font-family: "Montserrat";
  }
 
  .btn-dark{
- 
    color: #f6f5f0;
    background-color:#317a8b;
-    font-weight: 600;
-   
+   font-weight: 600;   
  }
 
  .genres{
    text-align: center;
    align-items: center;
-   
  }
 
  .btn{
    margin-right:10px;
  }
+
  .buttons{
    justify-content: center;
    display:flex;
-   
  }
+
  .f.label{
    border-radius:20px;
  }
+
 .noticeok{
    color: green;
    font-weight: 500;
 }
+
  .centredisplay{
    text-align: center;
  }
@@ -230,6 +228,7 @@ border-color: #103540;
  .redbtn:hover{
    background-color: red;
  }
+
  .col{
     border-color: red;
     border-style: dashed;
@@ -249,8 +248,8 @@ border-color: #103540;
     display:flex;
     border-color: #317a8b;
     border-width: 3px;
-    
-}
+    }
+
  .custom-text-field {
    width: 300px;
    height: 40px;
@@ -274,7 +273,7 @@ border-color: #103540;
    background-color: #05445e;
  }
 
-   hr {
+hr {
       padding: 0;
       border: none;
       border-top: medium double #05445e;
@@ -290,11 +289,10 @@ border-color: #103540;
       padding: 0 0.25em;
       background: white;
       }
- .btn-outline-dark{
+ 
+.btn-outline-dark{
     border: 1px solid #317a8b;
     color:#05445e;
- 
-    
  }
 
  btn-outline-danger:hover{
@@ -306,6 +304,7 @@ border-color: #103540;
    #05445e;
    color:#f6f5f0;
 }
+
 .custom-button{
    background-color: #317a8b;
    color:#f6f5f0;
