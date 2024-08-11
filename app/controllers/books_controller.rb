@@ -66,17 +66,30 @@ end
   end
   
   # PUT /genres/1/books/2
+  #def update
+   # @genre = Genre.find(params[:genre_id])
+    #@book = Book.find(params[:id])
+  
+    #if @book.update(params.require(:book).permit(:details))
+     # # Save the book successfully
+      #redirect_to genre_books_path(@genre)
+    #else
+     # render :action => "edit"
+    #end
+  #end
+
   def update
     @genre = Genre.find(params[:genre_id])
-    @book = Book.find(params[:id])
+    @book = @genre.books.find(params[:id])
   
-    if @book.update(params.require(:book).permit(:details))
-      # Save the book successfully
-      redirect_to genre_books_path(@genre)
+    if @book.update(book_params)
+      redirect_to genre_book_path(@genre, @book), notice: 'Book was successfully updated.'
     else
-      render :action => "edit"
+      render :edit, status: :unprocessable_entity
     end
   end
+  
+
   
   # DELETE /genres/1/books/2
   def destroy
@@ -88,6 +101,18 @@ end
   format.xml { head :ok }
   end
   end
-  
+  # Use callbacks to share common setup or constraints between actions.
+  def set_genre
+    @genre = Genre.find(params[:genre_id])
+  end
+
+  def set_book
+    @book = @genre.books.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def book_params
+    params.require(:book).permit(:title, :author, :synopsis)
   end
   
+  end
