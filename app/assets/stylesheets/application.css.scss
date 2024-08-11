@@ -40,10 +40,15 @@
    color: #05445e;
 }
  body{
-    
-    color:#317a8b;
+    color: #ffffff;
     font-size: 15px;
     background-image: url("bgnowave.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
  }
  .rosario-normal {
     font-family: "Rosario", sans-serif;
