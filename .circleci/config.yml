@@ -22,7 +22,7 @@ jobs:
 
       - run:
           name: build-docker-image
-          command: docker build --no-cache -t $DOCKER_USERNAME/$IMAGE_NAME:latest . --build-arg SECRET_KEY_BASE=$SECRET_KEY_BASE
+          command: docker build -t $DOCKER_USERNAME/$IMAGE_NAME:latest . --build-arg SECRET_KEY_BASE=$SECRET_KEY_BASE
 
       - run:
           name: publish-docker-image
