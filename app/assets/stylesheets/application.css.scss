@@ -87,7 +87,7 @@ html, body {
 }
 
 .card-title{
-   justify-content: center;
+   text-align: center;
 }
 .nav-link{
    color:#317a8b;
@@ -102,13 +102,19 @@ html, body {
 }
 .headingtext{
    text-decoration: underline;
-
    text-align: center;
-   font-size: 20px;
+   font-size: 18px;
    color: #ffffff;
    font-family: "Montserrat";
 }
 
+.subtitletext{
+   text-decoration: underline;
+   text-align: center;
+   font-size: 15px;
+   color: #ffffff;
+   font-family: "Montserrat";
+}
 .detailtext{
    font-weight: bold;
    justify-items: left;

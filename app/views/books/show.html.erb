@@ -1,4 +1,3 @@
-<h1>SHOW BOOK</h1>
 <div class="container-fluid pt-5">
   <div class="row">
     
@@ -7,10 +6,10 @@
     
     <div class="col-lg-6 centredisplay">
       <br />
-      <p>BOOK ADDED TO <%= @genre.name.upcase %> GENRE</p>
+      <p class="headingtext">BOOK ADDED TO <%= @genre.name.upcase %> GENRE</p>
       <br />
       
-<%= link_to "BACK TO #{@genre.name.upcase} BOOKS", genre_books_path(@genre), class: 'btn btn-info btn-sm' %>
+<%= link_to "BACK TO #{@genre.name.upcase} BOOKS", genre_books_path(@genre), class: 'btn btn-warning btn-sm' %>
 <%= link_to "BACK TO FULL CATALOGUE", genres_path, class: 'btn btn-primary btn-sm' %>
       
       <br /><br />

@@ -1,4 +1,3 @@
-<h1>INDEX BOOK</h1>
 <div class="container-fluid pt-5">
   <div class="row">
     <div class="col-lg-3">
@@ -6,10 +5,10 @@
 
     <div class="col-lg-6 centredisplay">
       <br />
-      <p>BOOKS IN THE <%= @genre.name %> GENRE</p>
+      <p class="headingtext">BOOKS IN THE <%= @genre.name %> GENRE</p>
       <br />
       
-      <%= link_to 'ADD NEW BOOK TO GENRE', new_genre_book_path(@genre), class: 'btn btn-info btn-sm' %>
+      <%= link_to 'ADD NEW BOOK TO GENRE', new_genre_book_path(@genre), class: 'btn btn-warning btn-sm' %>
       <%= link_to 'BACK TO FULL CATALOGUE', genres_path, class: 'btn btn-primary btn-sm' %>
       
       <br /><br />
@@ -34,7 +33,9 @@
             </div>
           <% end %>
         <% else %>
-          <p class="noticeok">NO BOOKS CURRENTLY IN THIS GENRE - ADD ONE ABOVE</p>
+        <div class="alert alert-secondary" role="alert">
+        NO BOOKS CURRENTLY IN THIS GENRE - ADD ONE ABOVE
+        </div>
         <% end %>
       </div>
     </div>
