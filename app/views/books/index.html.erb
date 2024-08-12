@@ -5,7 +5,7 @@
 
     <div class="col-lg-6 centredisplay">
       <br />
-      <p class="headingtext">BOOKS IN THE <%= @genre.name.upcase %> GENRE</p>
+      <p class="headingtext">Books in the <%= @genre.name.capitalize%> genre</p>
       <br />
       
       <%= link_to 'ADD NEW BOOK TO GENRE', new_genre_book_path(@genre), class: 'btn btn-warning btn-sm' %>

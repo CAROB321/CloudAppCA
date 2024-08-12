@@ -4,7 +4,7 @@
     </div>
     <div class="col-lg-6"> 
       <br />  
-      <p class="headingtext">EDIT <%= @genre.name.upcase %> GENRE</p>
+      <p class="headingtext">Edit <%= @genre.name.capitalize %> genre</p>
       <div class="centredisplay">
         <%= render "form", genre: @genre %>
         <br />
