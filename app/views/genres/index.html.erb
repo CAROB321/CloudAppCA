@@ -13,9 +13,9 @@
               <h5 class="card-title"><%= genre.name.upcase %></h5>
               <hr />
               <p class="detailtext w-100">Description</p>
-              <p class="infotext mb-3"><%= genre.description %></p>
+              <p class="infotext mb-3"><%= genre.description.upcase %></p>
               <p class="detailtext w-100">Location</p>
-              <p class="infotext mb-3"><%= genre.location %></p>
+              <p class="infotext mb-3"><%= genre.location.upcase %></p>
               <div class="buttons">
                 <%= link_to "SHOW GENRE", genre, class: "btn btn-outline-info btn-sm" %>
                 <%= link_to 'EDIT GENRE', edit_genre_path(genre), class: "btn btn-outline-warning btn-sm" %>
