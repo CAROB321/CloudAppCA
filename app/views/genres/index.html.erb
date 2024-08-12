@@ -10,12 +10,12 @@
         <div class="card mb-4" style="width: 75%; margin: 0 auto;">
           <div class="card-body">
             <div id="<%= dom_id genre %>">
-              <h5 class="card-title"><%= genre.name.upcase %></h5>
+              <h5 class="card-title"><%= genre.name.capitalize %></h5>
               <hr />
               <p class="detailtext w-100">Description</p>
-              <p class="infotext mb-3"><%= genre.description.upcase %></p>
+              <p class="infotext mb-3"><%= genre.description.capitalize %></p>
               <p class="detailtext w-100">Location</p>
-              <p class="infotext mb-3"><%= genre.location.upcase %></p>
+              <p class="infotext mb-3"><%= genre.location.capitalize %></p>
               <div class="buttons btn-space">
                 <%= link_to "SHOW GENRE", genre, class: "btn btn-outline-info btn-sm" %>
                 <%= link_to 'EDIT GENRE', edit_genre_path(genre), class: "btn btn-outline-warning btn-sm" %>

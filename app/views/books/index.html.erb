@@ -19,13 +19,17 @@
             <div class="card mb-3" style="width: 75%; margin: 0 auto;">
               <div class="card-body">
                 <div id="<%= dom_id book %>">
-                  <p><strong>Title:</strong> <%= book.title %></p>
-                  <p><strong>Author:</strong> <%= book.author %></p>
+                <h5 class="card-title"><%= book.title %></h5>
+              <hr />
+                  <p class="detailtext w-100">Author: </p>
+                <p class="infotext mb-3"><%= book.author %></p>
+                  <p class="detailtext w-100">Synopsis: </p>
+                <p class="infotext mb-3"><%= book.synopsis %></p>
                   
                 </div>
 
                 <div class="buttons btn-space">
-                  <%= link_to 'SEE BOOK SNYOPSIS', genre_book_path(@genre, book), class: 'btn btn-outline-info btn-sm' %>
+                  
                   <%= link_to 'EDIT BOOK', edit_genre_book_path(@genre, book), class: 'btn btn-outline-warning btn-sm' %>
                   <%= button_to 'DELETE BOOK', genre_book_path(@genre, book), method: :delete, class: 'btn btn-outline-danger btn-sm' %>
                 </div>
