@@ -23,7 +23,7 @@
               <p><strong>Synopsis:</strong> <%= @book.synopsis %></p>
             </div>
 
-            <div class="buttons">
+            <div class="buttons btn-space">
               <%= link_to 'EDIT BOOK', edit_genre_book_path(@genre, @book), class: 'btn btn-outline-warning btn-sm' %>
               <%= button_to 'DELETE BOOK', genre_book_path(@genre, @book), method: :delete, class: 'btn btn-outline-danger btn-sm' %>
             </div>

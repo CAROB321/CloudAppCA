@@ -113,6 +113,7 @@ html, body {
    margin: 0 auto;
    justify-items: center;
 }
+
 .subtitletext{
    text-decoration: underline;
    text-align: center;
@@ -123,10 +124,11 @@ html, body {
 .detailtext{
    font-weight: bold;
    justify-items: left;
-   font-size: 20px;
+   font-size: 15px;
    color: #133d49;
    font-family: "Montserrat";
 }
+
 
 .btn-warning{
    background-color: #f15a29;
@@ -166,9 +168,12 @@ border-color: #103540;
    }
    
 .infotext{
-   font-size: 18px;
+   font-size: 15px;
 }
 
+.btn-space {
+   margin-right: 10px; 
+ }
 
  body {
    background-image: url("bgnowave.png");
