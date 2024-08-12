@@ -19,7 +19,7 @@
       <div id="books">
         <% if @genre.books.any? %>
           <% @genre.books.each do |book| %>
-            <div class="card mb-3" style="width: 100%; max-width: 600px; margin: 0 auto;">
+            <div class="card mb-3" style="width: 75%; margin: 0 auto;">
               <div class="card-body">
                 <p><strong>Title:</strong> <%= book.title %></p>
                 <p><strong>Author:</strong> <%= book.author %></p>

@@ -7,7 +7,7 @@
       <%= link_to "ADD NEW GENRE", new_genre_path, class: "btn btn-warning mb-3" %>
       <hr class="hr mb-4" />
       <% @genres.each do |genre| %>
-        <div class="card mb-4" style="max-width: 600px; width: 100%;">
+        <div class="card mb-4" style="width: 75%; margin: 0 auto;">
           <div class="card-body">
             <div id="<%= dom_id genre %>">
               <h5 class="card-title"><%= genre.name.upcase %></h5>
