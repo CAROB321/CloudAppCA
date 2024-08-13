@@ -1,2 +1,20 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+  title: "Confessions of a Fallen Angel"
+  author: "Ronan O'Brien"
+  genre: one
 
+two:
+  title: "The Thursday Murder Club"
+  author: "Richard Osman"
+  genre: one
+
+three:
+  title: "My World"
+  author: "David Attenborough"
+  genre: two
+
+four:
+  title: "World War 2"
+  author: "A. Soldier"
+  genre: two

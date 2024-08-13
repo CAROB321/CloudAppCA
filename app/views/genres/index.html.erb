@@ -1,3 +1,9 @@
+<%# Filename index.html.erb%>
+<%# Author Rita O'Brien%>
+<%# August 2024%>
+
+<%# displays all genres%>
+
 <div class="container-fluid pt-5">
   <div class="row padding-top="50px">
     <div class="col-lg-3">
@@ -10,7 +16,7 @@
         <div class="card mb-4" style="width: 75%; margin: 0 auto;">
           <div class="card-body">
             <div id="<%= dom_id genre %>">
-              <h5 class="card-title"><%= genre.name.titleize %></h5>
+              <h5 class="card-title"><%= genre.name.titleize %></h5><%# capitalizes the first letter of each word%>
               <hr />
               <p class="detailtext w-100">Description</p>
               <p class="infotext mb-3"><%= genre.description.capitalize %></p>

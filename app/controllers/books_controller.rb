@@ -27,22 +27,7 @@ class BooksController < ApplicationController
   @book = @genre.books.build
   end
   
-  # POST /genres/1/books
-  #def create
- # @genre = Genre.find(params[:genre_id])
-  # For URL like /genres/1/books
-  # Populate an book associate with genre 1 with form data
-  # genre will be associated with the book
-  # @book = @genre.books.build(params.require(:book).permit!)
-  #@book = @genre.books.build(params.require(:book).permit(:details))
- # if @book.save
-  # Save the book successfully
- # redirect_to genre_book_url(@genre, @book)
-  #else
-  #render :action => "new"
- # end
- # end
-
+  
  def create
   @genre = Genre.find(params[:genre_id])
   # Build a new book associated with the genre
@@ -53,7 +38,7 @@ class BooksController < ApplicationController
     redirect_to genre_book_path(@genre, @book), notice: 'Book was successfully created.'
   else
     # Render the new template with errors
-    render :new
+    render :new, status: :unprocessable_entity
   end
 end
   

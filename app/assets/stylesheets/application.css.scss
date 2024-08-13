@@ -16,13 +16,11 @@
 
  @import "bootstrap";
 
-
  
  .navbar-nav {
    margin-left: auto;
    color:#317a8b;
 }
-
 
 
 html, body {
@@ -36,28 +34,26 @@ html, body {
    text-align: center;
 }
 .custom-navbar {
-   background-image: image-url('navbg.png'); /* Set the background image for the navbar */
-   background-size: cover; /* Cover the entire navbar */
-   background-position: center; /* Center the background image */
-   background-repeat: no-repeat; /* Prevent repeating the background image */
-   height: 150px; /* Adjust the height as needed */
-   border: none; /* Remove border if any */
+   background-image: image-url('navbg.png'); 
+   background-size: cover; 
+   background-position: center; 
+   background-repeat: no-repeat; 
+   height: 150px; 
+   border: none; 
  }
  
  .navbar-logo {
-   max-height: 150px; /* Adjust the logo height as needed */
+   max-height: 150px; 
  }
  
  .navbar-brand {
    display: flex;
    justify-content: center;
-   width: 100%; /* Make sure the brand occupies full width */
+   width: 100%; 
  }
 
-
-
 .custom-navbar {
-   height: 125px; /* Adjust this value to set the desired height */
+   height: 125px; 
    padding:0;
  }
  
@@ -71,9 +67,9 @@ html, body {
    background-color:#05445e;
    text-align: center;
    position:relative;
-   background-position: center; /* Center the background image */
-   width: 100%; /* Ensure the navbar takes the full width of the viewport */
-   border: none; /* Remove any border */
+   background-position: center; 
+   width: 100%; 
+   border: none; 
    padding: 15px;
    height: 170px;
    top: 0;
@@ -81,7 +77,6 @@ html, body {
 }
 
 
- 
  .alert-danger{
 
    color: #ffffff;
