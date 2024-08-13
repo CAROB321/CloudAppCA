@@ -5,7 +5,7 @@
 
     <div class="col-lg-6 centredisplay">
       <br />
-      <p class="headingtext">Books in the <%= @genre.name.capitalize%> genre</p>
+      <p class="headingtext">BOOKS IN THE <%= @genre.name.upcase%> GENRE</p>
       <br />
       
       <%= link_to 'ADD NEW BOOK TO GENRE', new_genre_book_path(@genre), class: 'btn btn-warning btn-spacing btn-sm' %>
@@ -31,8 +31,8 @@
                 <div class="buttons btn-space">
                   
                   <%= link_to 'EDIT BOOK', edit_genre_book_path(@genre, book), class: 'btn btn-outline-warning btn-sm' %>
-                  <%= button_to 'DELETE BOOK', genre_book_path(@genre, book), method: :delete, class: 'btn btn-outline-danger btn-sm' %>
-                </div>
+                  <%= button_to 'DELETE GENRE', genre_book_path(@genre, book), method: :delete, form: { data: { 'turbo-confirm': 'Are you sure?' } }, class: "btn btn-outline-danger btn-sm" %>
+                  </div>
               </div>
             </div>
           <% end %>

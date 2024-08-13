@@ -1,32 +1,42 @@
 <%= form_with(model: genre) do |form| %>
   <% if genre.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(genre.errors.count, "error") %> prohibited this genre from being saved:</h2>
-
+    <div class="alert alert-warning">
+      <h4 class="alert-heading"><%= pluralize(genre.errors.count, "error") %> prohibited this genre from being saved:</h4>
       <ul>
-        <% genre.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% genre.errors.full_messages.each do |msg| %>
+          <%= msg %>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div>
+  
+<div class="field d-flex flex-column align-items-center">
+
+<div class="field">
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name, class: "custom-text-field" %>
+    <%= form.text_field :name, class: "form-control custom-text-field" %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description, class: "custom-text-field" %>
-  </div>
 
-  <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location, class: "custom-text-field" %>
-  </div>
 <br />
-  <div>
+  <div class="field">
+  <%= form.label :description, style: "display: block" %>
+  <%= form.text_field :description, class: "form-control custom-text-field" %>
+</div>
+
+<br />
+<div class="field">
+    <%= form.label :location, style: "display: block" %>
+    <%= form.select :location, options_for_select(['Shelf 1', 'Shelf 2', 'Shelf 3', 'Shelf 4', 'Shelf 5', 'Shelf 6', 'Shelf 7', 'Shelf 8', 'Shelf 9', 'Shelf 10', 'Shelf 11', 'Shelf 12', 'Shelf 13', 'Shelf 14', 'Shelf 15', 'Shelf 16', 'Shelf 17', 'Shelf 18', 'Shelf 19', 'Shelf 20'], selected: genre.location), { include_blank: 'Select a Shelf' }, class: "form-select custom-text-field" %>
+  </div>
+
+  <br />
+  <div class="actions">
     <%= form.submit "SAVE", class: "btn btn-warning btn-sm" %>
+  </div>
+
+
+ 
   </div>
 <% end %>

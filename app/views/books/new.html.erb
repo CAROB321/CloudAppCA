@@ -1,11 +1,13 @@
+
+
 <div class="container-fluid pt-5">
   <div class="row">
     <div class="col-lg-3">
     </div>
     <div class="col-lg-6 centredisplay">   
     <br />
-    <p class="headingtext" >Add new book to the <%= @genre.name.capitalize %> genre</p>
-    <br />
+    <p class="headingtext" >ADD NEW BOOK TO THE <%= @genre.name.upcase %> GENRE</p>
+
         <%= render "form", book: @book %>
         
          <%= link_to "BACK TO FULL CATALOGUE", genre_books_path, class: "btn btn-primary btn-sm" %>

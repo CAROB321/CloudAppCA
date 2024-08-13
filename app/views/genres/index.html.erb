@@ -10,7 +10,7 @@
         <div class="card mb-4" style="width: 75%; margin: 0 auto;">
           <div class="card-body">
             <div id="<%= dom_id genre %>">
-              <h5 class="card-title"><%= genre.name.capitalize %></h5>
+              <h5 class="card-title"><%= genre.name.titleize %></h5>
               <hr />
               <p class="detailtext w-100">Description</p>
               <p class="infotext mb-3"><%= genre.description.capitalize %></p>
@@ -19,7 +19,7 @@
               <div class="buttons btn-space">
                 <%= link_to "SHOW GENRE", genre, class: "btn btn-outline-info btn-sm" %>
                 <%= link_to 'EDIT GENRE', edit_genre_path(genre), class: "btn btn-outline-warning btn-sm" %>
-                <%= button_to "DELETE GENRE", genre, method: :delete, class: "btn btn-outline-danger btn-sm" %>
+                <%= button_to 'DELETE GENRE', genre, method: :delete, form: { data: { 'turbo-confirm': 'Are you sure?' } }, class: "btn btn-outline-danger btn-sm" %>
               </div>
             </div>
           </div>

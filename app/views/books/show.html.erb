@@ -6,7 +6,7 @@
     
     <div class="col-lg-6 centredisplay">
       <br />
-      <p class="headingtext">Book Details</p>
+      <p class="headingtext">BOOK DETAILS</p>
       <br />
     
 <%= link_to "BACK TO #{@genre.name.upcase} BOOKS", genre_books_path(@genre), class: 'btn btn-warning btn-spacing btn-sm' %>
@@ -18,7 +18,7 @@
         <div class="card mb-3" style="width: 75%; margin: 0 auto;">
           <div class="card-body">
             <div id="<%= dom_id @book %>">
-            <h5 class="card-title"><%= @book.title.capitalize %></h5>
+            <h5 class="card-title"><%= @book.title.titleize %></h5>
               <hr />
               <p class="detailtext w-100">Author </p>
                <p class="infotext mb-3"><%= @book.author %></p>
@@ -29,7 +29,7 @@
 
             <div class="buttons btn-space">
               <%= link_to 'EDIT BOOK', edit_genre_book_path(@genre, @book), class: 'btn btn-outline-warning btn-sm' %>
-              <%= button_to 'DELETE BOOK', genre_book_path(@genre, @book), method: :delete, class: 'btn btn-outline-danger btn-sm' %>
+              <%= button_to 'DELETE BOOK', genre_book_path(@genre, @book), method: :delete, form: { data: { 'turbo-confirm': 'Are you sure?' } }, class: "btn btn-outline-danger btn-sm " %>
             </div>
           </div>
         </div>

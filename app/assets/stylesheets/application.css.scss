@@ -31,6 +31,10 @@ html, body {
    padding: 0;
 }
 
+.formoutput{
+   align-items: center;
+   text-align: center;
+}
 .custom-navbar {
    background-image: image-url('navbg.png'); /* Set the background image for the navbar */
    background-size: cover; /* Cover the entire navbar */
@@ -76,9 +80,27 @@ html, body {
    left: 0;
 }
 
+
+ 
+ .alert-danger{
+
+   color: #ffffff;
+
+ }
+
+ .alert-warning{
+   background-color:#ffffff;
+   color: red;
+   border-color: red;
+ }
+ 
+ .alert-heading{
+   font-size: 15px;
+ }
+
 .btn-spacing {
    margin-bottom: 10px; }
-   
+
 .card{
    
    background-color: #ffffff;
@@ -114,7 +136,7 @@ html, body {
 }
 
 .custom-alert {
-   width: 50%;   
+   width: 75%;   
    margin: 0 auto;
    justify-items: center;
 }
@@ -160,9 +182,9 @@ html, body {
 }
 
 .btn-outline-info:hover{
-background-color:#103540;
+background-color:#0275d8;
 color:#ffffff!important;
-border-color: #103540;
+border-color:#0275d8;
 }
 
    
@@ -189,6 +211,8 @@ border-color: #103540;
    margin: 0;
    padding: 0;
    color:#ffffff;
+   font-family: "Montserrat";
+   font-size:15px;
  }
  
 
@@ -256,8 +280,9 @@ border-color: #103540;
 }
  .centredisplay{
    text-align: center;
+   align-items:center;
  }
-
+ 
  .redbtn:hover{
    background-color: red;
  }
@@ -288,6 +313,10 @@ border-color: #103540;
    border: 1px solid #ccc;
    padding: 10px;
    border-radius: 5px;
+ }
+
+ .field{
+   justify-items: center;
  }
 
  .custom-submit-button {

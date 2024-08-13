@@ -1,15 +1,15 @@
-<%= form_for([@genre, @book]) do |f| %>
+<%= form_with(model: [@genre, @book]) do |f| %>
   <% if @book.errors.any? %>
-  <div id="error_explanation">
-  <h2><%= pluralize(@book.errors.count, "error")%>
-  prohibited this review from being saved:</h2>
-  <ul>
-  <% @book.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
+    <div class="alert alert-warning">
+      <h4 class="alert-heading"><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h4>
+      <ul>
+        <% @book.errors.full_messages.each do |msg| %>
+          <%= msg %>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
-  </ul>
-  </div>
-  <% end %>
+  
   <div class="field">
   <p>
   <div class="field">
@@ -17,13 +17,12 @@
     <%= f.text_field :title, class: "custom-text-field" %>
   </div>
 
-
-
+  <br />
   <div class="field">
     <%= f.label :AUTHOR, style: "display: block"  %>
     <%= f.text_field :author, class: "custom-text-field" %>
   </div>
-
+  <br />
  
   <div class="field">
     <%= f.label :SYNOPSIS, style: "display: block"  %>

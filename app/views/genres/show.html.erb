@@ -5,7 +5,7 @@
     <div class="col-lg-6 centredisplay">
       
       <br />
-      <p class="headingtext">Genre <%= @genre.name.capitalize %></p>
+      <p class="headingtext">GENRE <%= @genre.name.upcase %></p>
       <br />
 
       <%= link_to 'ADD NEW BOOK', new_genre_book_path(@genre), class: 'btn btn-warning btn-spacing btn-sm' %>
@@ -13,7 +13,7 @@
       <br /><br />
 
       
-      <p class="subtitletext">Books in the <%= @genre.name.capitalize %> genre</p>
+      <p class="subtitletext">BOOKS IN THE <%= @genre.name.upcase %> GENRE</p>
 
       <div id="books">
         <% if @genre.books.any? %>
@@ -33,7 +33,7 @@
                 <div class="buttons btn-space">
                   
                   <%= link_to 'Edit Book', edit_genre_book_path(@genre, book), class: 'btn btn-outline-warning btn-sm' %>
-                  <%= button_to 'Delete Book', genre_book_path(@genre, book), method: :delete, class: 'btn btn-outline-danger btn-sm', data: { confirm: 'Are you sure?' } %>
+                  <%= button_to 'Delete Book', genre_book_path(@genre, book), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger btn-sm' %>
                 </div>
               </div>
             </div>
